@@ -104,9 +104,10 @@ gulp.task('dependencies-jade', function() {
 
 // parsing js files
 gulp.task('dependencies-js', function() {
-    return gulp.src('src/app.js')
+    return gulp.src('src/app.js', { base: 'src' })
         .pipe(dependencies({
-            dest: path_dest
+            dest: path_dest,
+            base: 'src' // the gulp.src base value
         }))
         .pipe(gulp.dest(path_dest));
 });
