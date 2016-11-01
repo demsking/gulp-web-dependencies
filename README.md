@@ -2,6 +2,11 @@
 Parse your HTML/JS file and copy bower/npm dependencies to your destination directory
 
 [![Build Status](https://travis-ci.org/demsking/gulp-web-dependencies.svg?branch=master)](https://travis-ci.org/demsking/gulp-web-dependencies)
+[![bitHound Overall Score](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/score.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies)
+[![bitHound Dependencies](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/dependencies.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/devDependencies.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/code.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Install
 
