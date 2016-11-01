@@ -4,6 +4,7 @@
   "description": "Parse your HTML/JS file and copy bower/npm files to your destination directory",
   "main": "index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha tests/tests.js",
     "coverage": "istanbul cover _mocha -- tests/tests.js -R spec"
   },
@@ -36,8 +37,13 @@
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
+    "cz-conventional-changelog": "^1.2.0",
     "istanbul": "^0.4.4",
-    "mocha": "^2.5.3"
+    "mocha": "^3.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
