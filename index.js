@@ -11,12 +11,12 @@
  * @private
  */
 
-var es = require('event-stream')
-  , gutil = require('gulp-util')
-  , mkdirp = require("mkdirp")
-  , path = require('path')
-  , fs = require('fs')
-  , url = require('url');
+var es = require('event-stream');
+var gutil = require('gulp-util');
+var mkdirp = require("mkdirp");
+var path = require('path');
+var fs = require('fs');
+var url = require('url');
 
 const PLUGIN_NAME = 'gulp-web-dependencies';
 const REGEX = /("|')([\.\/\\]*((bower_components|node_modules)\/([a-z0-9\.+@~$!;:\/\\{}()\[\]|=&*£%§_-]+(\.[a-z0-9]+)?)))['"]/gi;
