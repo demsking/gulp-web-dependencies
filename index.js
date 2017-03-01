@@ -19,7 +19,6 @@ var fs = require('fs');
 var url = require('url');
 
 const PLUGIN_NAME = 'gulp-web-dependencies';
-const REGEX = /("|')([\.\/\\]*((bower_components|node_modules)\/([a-z0-9\.+@~$!;:\/\\{}()\[\]|=&*£%§_-]+(\.[a-z0-9]+)?)))['"]/gi;
 
 module.exports = function(options) {
     options = options || {};
@@ -33,6 +32,13 @@ module.exports = function(options) {
             options.prefix += '/';
         }
     }
+
+    // Allow the user to add their own folders to the search pattern
+    var userFolders = options.folders ? options.folders + '|' : '';
+    var REGEX = new RegExp(
+        `("|')([\\.\\/\\\\]*((${userFolders}bower_components|node_modules)\\/([a-z0-9\\.+@~$!;:\\/\\\\{}()\\[\\]|=&*£%§_-]+(\\.[a-z0-9]+)?)))['"]`,
+        'gi'
+    );
 
     return es.map((file, done) => {
         let dest = options.dest || path.dirname(file.path);
