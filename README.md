@@ -189,6 +189,24 @@ var _auth = require('firebase/auth');
 // ...
 ```
 
+## Use the your own search folders pattern
+
+You can use the the `folders` option to define your search folders pattern. Each folder is separated by a pipe `|`:
+
+```js
+gulp.task('dependencies', function() {
+    return gulp.src('src/**/*.pug')
+        .pipe(pug())
+        .pipe(dependencies({
+            folders: '~/some/folder|~/another/folder',
+            dest: 'dist',
+            prefix: '/vendor',
+        }))
+        .pipe(gulp.dest('dist'));
+});
+
+```
+
 ## Use the flat option
 
 

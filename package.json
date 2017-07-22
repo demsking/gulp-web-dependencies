@@ -1,6 +1,6 @@
 {
   "name": "gulp-web-dependencies",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Parse your HTML/JS file and copy bower/npm files to your destination directory",
   "main": "index.js",
   "scripts": {
