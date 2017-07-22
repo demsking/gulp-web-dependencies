@@ -198,7 +198,7 @@ gulp.task('dependencies', function() {
     return gulp.src('src/**/*.pug')
         .pipe(pug())
         .pipe(dependencies({
-            folders: '~/some/folder|~/another/folder',
+            folders: 'bower|assets',
             dest: 'dist',
             prefix: '/vendor',
         }))
