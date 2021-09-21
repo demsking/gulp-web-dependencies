@@ -1,33 +1,34 @@
 image: node:lts-alpine
 
 stages:
-  - test
-  - publish
+  - testing
+  - packaging
+  - publishing
 
 npm outdated:
-  stage: test
+  stage: testing
   script:
     - npm ci
     - npm outdated
   allow_failure: true
 
 security scan:
-  stage: test
+  stage: testing
   script:
     - npm audit --production
   allow_failure: false
 
 test:
-  stage: test
+  stage: testing
   script:
-    - npm it
+    - RUN_IN_CI=yes npm it
   coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
   artifacts:
     paths:
       - coverage/
 
 package:
-  stage: publish
+  stage: packaging
   script:
     - npm pack
   artifacts:
@@ -35,7 +36,7 @@ package:
       - ./*.tgz
 
 publish:
-  stage: publish
+  stage: publishing
   only:
     - tags
     - triggers

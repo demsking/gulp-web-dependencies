@@ -3,10 +3,8 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     'index.js',
-    'lib/**',
     '!.eslintrc.js',
-    '!test/**',
-    '!demo/**',
+    '!tests/**',
     '!dist/**',
     '!coverage/**',
     '!**/node_modules/**',
@@ -16,6 +14,6 @@ module.exports = {
     'js',
     'json',
   ],
-  notify: true,
+  notify: false,
   testMatch: ['<rootDir>/tests/*.js'],
 }

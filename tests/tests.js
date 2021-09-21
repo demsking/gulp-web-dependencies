@@ -65,6 +65,13 @@ describe(info.name, () => {
 
         try {
             stream.write(fakeFile);
+
+            if (process.env.RUN_IN_CI) {
+                // On CI, tests are run as root
+                next();
+            } else {
+                next(new Error('should failed!'));
+            }
         } catch(e) {
             next();
         }
