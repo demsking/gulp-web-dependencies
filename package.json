@@ -4,8 +4,7 @@
   "description": "Parse your HTML/JS file and copy bower/npm files to your destination directory",
   "main": "index.js",
   "scripts": {
-    "commit": "git-cz",
-    "test": "mocha tests/tests.js",
+    "test": "jest",
     "coverage": "istanbul cover _mocha -- tests/tests.js -R spec"
   },
   "repository": {
@@ -32,12 +31,10 @@
   },
   "homepage": "https://github.com/demsking/gulp-web-dependencies#readme",
   "dependencies": {
-    "event-stream": "^3.3.4",
-    "gulp-util": "^3.0.7",
-    "mkdirp": "^0.5.1"
+    "event-stream": "^4.0.1",
+    "gulp-util": "^3.0.7"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^2.0.0",
     "istanbul": "^0.4.4",
     "mocha": "^9.1.1"
   },

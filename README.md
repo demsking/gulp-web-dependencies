@@ -1,19 +1,20 @@
-# gulp-web-dependencies
+# Gulp Web Dependencies
+
 Parse your HTML/JS file and copy bower/npm dependencies to your destination directory
 
-[![Build Status](https://travis-ci.org/demsking/gulp-web-dependencies.svg?branch=master)](https://travis-ci.org/demsking/gulp-web-dependencies)
-[![bitHound Overall Score](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/score.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies)
-[![bitHound Dependencies](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/dependencies.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/devDependencies.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies/master/dependencies/npm)
-[![bitHound Code](https://www.bithound.io/github/demsking/gulp-web-dependencies/badges/code.svg)](https://www.bithound.io/github/demsking/gulp-web-dependencies)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![npm](https://img.shields.io/npm/v/gulp-web-dependencies.svg)](https://www.npmjs.com/package/gulp-web-dependencies)
+[![Build status](https://gitlab.com/demsking/gulp-web-dependencies/badges/master/pipeline.svg)](https://gitlab.com/demsking/gulp-web-dependencies/pipelines)
+[![Test coverage](https://gitlab.com/demsking/gulp-web-dependencies/badges/master/coverage.svg)](https://gitlab.com/demsking/gulp-web-dependencies/pipelines)
+[![Buy me a beer](https://img.shields.io/badge/Buy%20me-a%20beer-1f425f.svg)](https://www.buymeacoffee.com/demsking)
 
 ## Install
 
 `npm install --save-dev gulp-web-dependencies`
 
 ## Usage
+
 The project structure:
+
 ```
 project/
 ├── bower_components
@@ -265,4 +266,4 @@ project/
 
 ## License
 
-Under the MIT license. See [LICENSE](https://github.com/demsking/gulp-web-dependencies/blob/master/LICENSE) file for more details.
+Under the MIT license. See [LICENSE](https://gitlab.com/demsking/gulp-web-dependencies/blob/master/LICENSE) file for more details.

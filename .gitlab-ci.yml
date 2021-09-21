@@ -1,0 +1,47 @@
+image: node:lts-alpine
+
+stages:
+  - test
+  - publish
+
+npm outdated:
+  stage: test
+  script:
+    - npm ci
+    - npm outdated
+  allow_failure: true
+
+security scan:
+  stage: test
+  script:
+    - npm audit --production
+  allow_failure: false
+
+test:
+  stage: test
+  script:
+    - npm it
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  artifacts:
+    paths:
+      - coverage/
+
+package:
+  stage: publish
+  script:
+    - npm pack
+  artifacts:
+    paths:
+      - ./*.tgz
+
+publish:
+  stage: publish
+  only:
+    - tags
+    - triggers
+  script:
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+    - npm publish
+  environment:
+    name: npm
+    url: https://www.npmjs.com/package/gulp-web-dependencies

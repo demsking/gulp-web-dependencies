@@ -1,0 +1,11 @@
+tests
+coverage
+.directory
+.eslintrc
+.gitignore
+.gitlab-ci.yml
+Makefile
+*.tgz
+/*.js
+*.bak
+*.config.js
