@@ -7,6 +7,14 @@ Parse your HTML/JS file and copy bower/npm dependencies to your destination dire
 [![Test coverage](https://gitlab.com/demsking/gulp-web-dependencies/badges/master/coverage.svg)](https://gitlab.com/demsking/gulp-web-dependencies/pipelines)
 [![Buy me a beer](https://img.shields.io/badge/Buy%20me-a%20beer-1f425f.svg)](https://www.buymeacoffee.com/demsking)
 
+## ⚠️ Project discontinued
+
+`gulp-web-dependencies` is no longer maintained and is not recommended for new projects.
+
+A security vulnerability involving arbitrary file reads and writes has been reported. Users should avoid processing untrusted HTML or JavaScript files with this package and migrate to a maintained alternative.
+
+No further maintenance or security fixes are planned.
+
 ## Install
 
 `npm install --save-dev gulp-web-dependencies`
